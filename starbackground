@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
 let stars = [];
 let numofstars = 500;
 let varia;
@@ -36,7 +45,7 @@ class Star {
     this.x += cos(this.a)*(this.dis/varia) + cos(this.a)/1000;
     this.y += sin(this.a)*(this.dis/varia) + sin(this.a)/1000;
     
-    if (this.dis>sqrt(width*height)-sqrt(this.xstart*this.ystart)) {this.xstart=random(0,width); this.ystart=random(0,height); this.size=0;         this.x=this.xstart+cos(this.a); this.y=this.ystart+sin(this.a);}
+    if (this.dis>sqrt(width*height)) {this.xstart=random(0,width); this.ystart=random(0,height); this.size=0;         this.x=this.xstart+cos(this.a); this.y=this.ystart+sin(this.a);}
   }
   
   
@@ -45,3 +54,7 @@ class Star {
     circle(this.x,this.y,this.size);
   }
 }
+    </script>
+</body>
+
+</html>
