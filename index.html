@@ -12,7 +12,7 @@ let numofstars = 500;
 let varia;
 
 function setup() {
-  createCanvas(windowWidth-25,windowHeight-25);
+  createCanvas(windowWidth-20,windowHeight-20);
   varia = sqrt(width*height)/2;
   for (let i = 0; i < numofstars; i += 1) {
     let star = new Star(random(0,width), random(0,height));
