@@ -32,9 +32,9 @@ function draw() {
 class Star {
   constructor(tempx, tempy) {
     this.xstart = tempx;
-    this.x = tempx;
+    this.x = tempx + cos(atan2(this.tempy-height/2,this.tempx-width/2));
     this.ystart = tempy;
-    this.y = tempy;
+    this.y = tempy + sin(atan2(this.tempy-height/2,this.tempx-width/2));
   }
 
   move() {
