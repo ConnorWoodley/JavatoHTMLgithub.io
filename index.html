@@ -7,12 +7,22 @@
 
 <body>
     <script type="text/javascript">
-let stars = [];
-let numofstars = 500;
-let varia;
+let stars = [], numofstars = 500, varia;
+let song, analyzer;
 
 function setup() {
   createCanvas(windowWidth-20,windowHeight-20);
+
+  /* Music Focus Section */
+    song.loop();
+
+    // create a new Amplitude analyzer
+    analyzer = new p5.Amplitude();
+
+    // Patch the input to an volume analyzer
+    analyzer.setInput(song);
+  /* Music Focus Section */
+
   varia = sqrt(width*height)/2;
   for (let i = 0; i < numofstars; i += 1) {
     let star = new Star(random(0,width), random(0,height));
@@ -22,6 +32,17 @@ function setup() {
 
 function draw() {
   background(0);
+
+  /* Music Focus Section */
+    let level = analyzer.getLevel();
+
+    // Create multiple bars
+    for(let i = 0; i < 10; i++) {
+      let barHeight = map(level, 0, 1, 10, height);
+      let x = width * i/10;
+     rect(x, height - barHeight, width/12, barHeight);
+    }
+  /* Music Focus Section */
 
   for (let star of stars) {
     star.move();
