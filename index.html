@@ -8,7 +8,8 @@
 <body>
     <script type="text/javascript">
 let stars = [], numofstars = 500, varia;
-let song, analyzer;
+let analyzer;
+let song = new Audio("https://github.com/cre8ture/audioFilesForBL/blob/main/1.mp3");
 
 function setup() {
   createCanvas(windowWidth-20,windowHeight-20);
@@ -33,7 +34,7 @@ function setup() {
 function draw() {
   background(0);
 
-  /* Music Focus Section */
+  /* Music Focus Section 
     let level = analyzer.getLevel();
 
     // Create multiple bars
@@ -42,7 +43,7 @@ function draw() {
       let x = width * i/10;
      rect(x, height - barHeight, width/12, barHeight);
     }
-  /* Music Focus Section */
+   Music Focus Section */
 
   for (let star of stars) {
     star.move();
