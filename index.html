@@ -10,9 +10,11 @@
 let stars = [], numofstars = 500, varia;
 let song, analyzer;
 
+/*
 function preload() {
   song = loadSound('https://github.com/ConnorWoodley/JavatoHTMLgithub.io/blob/main/1.mp3');
 }
+*/
 
 function setup() {
   createCanvas(windowWidth-20,windowHeight-20);
@@ -27,7 +29,7 @@ function setup() {
     analyzer.setInput(song);
   /* Music Focus Section */
 
-  varia = sqrt(width*height)/2;
+  //varia = sqrt(width*height)/2;
   for (let i = 0; i < numofstars; i += 1) {
     let star = new Star(random(0,width), random(0,height));
     stars.push(star);
