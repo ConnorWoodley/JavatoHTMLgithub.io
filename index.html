@@ -13,7 +13,7 @@ let song = new Audio('https://github.com/ConnorWoodley/JavatoHTMLgithub.io/blob/
 function setup() {
   createCanvas(windowWidth-20,windowHeight-20);
 
-  /* Music Focus Section
+  /* Music Focus Section */
     song.loop();
 
     // create a new Amplitude analyzer
@@ -32,9 +32,8 @@ function setup() {
 
 function draw() {
   background(0);
-  song.play();
 
-  /* Music Focus Section 
+   /* Music Focus Section */
     let level = analyzer.getLevel();
 
     // Create multiple bars
@@ -43,7 +42,7 @@ function draw() {
       let x = width * i/10;
      rect(x, height - barHeight, width/12, barHeight);
     }
-   Music Focus Section */
+   /* Music Focus Section */
 
   for (let star of stars) {
     star.move();
