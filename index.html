@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
-    <video controls="" autoplay="" name="media"> <source src="https://github.com/ConnorWoodley/JavatoHTMLgithub.io/blob/main/relaxing-guitar-loop-v5-245859.mp3?raw=true" type="audio/mp3"></video>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
+</head>
 
 <body>
     <script type="text/javascript">
@@ -12,7 +12,8 @@ let stars = [], numofstars = 500, varia;
 var song;
 
 function preload() {
-  song = loadSound('relaxing-guitar-loop-v5-245859.mp3');
+
+  song = loadSound('https://github.com/ConnorWoodley/JavatoHTMLgithub.io/blob/main/relaxing-guitar-loop-v5-245859.mp3?raw=true');
 }
 
 function setup() {
