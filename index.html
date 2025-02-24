@@ -21,15 +21,6 @@ function setup() {
   }
 }
 
-function draw() {
-  background(0);
-
-  for (let star of stars) {
-    star.move();
-    star.show();
-  }
-}
-
 class Star {
   constructor(tempx, tempy) {
     this.xstart = tempx;
@@ -57,7 +48,16 @@ class Star {
   
   show() {
     strokeWeight(0);
-    elipse(this.x,this.y,this.size);
+    circle(this.x,this.y,this.size);
+  }
+}
+
+function draw() {
+  background(0);
+
+  for (let star of stars) {
+    star.move();
+    star.show();
   }
 }
     </script>
