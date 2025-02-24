@@ -24,11 +24,11 @@ function setup() {
     let star = new Star(random(0,width), random(0,height));
     stars.push(star);
   }
+  song.play();
 }
 
 function draw() {
   background(0);
-  song.play();
 
   for (let star of stars) {
     star.move();
