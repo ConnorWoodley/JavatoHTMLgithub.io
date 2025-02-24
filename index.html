@@ -28,7 +28,6 @@ function setup() {
 
 function draw() {
   background(0);
-  if (mousePressed) {song.play();}
 
   for (let star of stars) {
     star.move();
@@ -65,6 +64,10 @@ class Star {
     strokeWeight(0);
     ellipse(this.x,this.y,this.size,this.size);
   }
+}
+
+function mousePressed(){
+  song.play();
 }
     </script>
 </body>
