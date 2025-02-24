@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,15 @@ function setup() {
   for (let i = 0; i < numofstars; i += 1) {
     let star = new Star(random(0,width), random(0,height));
     stars.push(star);
+  }
+}
+
+function draw() {
+  background(0);
+
+  for (let star of stars) {
+    star.move();
+    star.show();
   }
 }
 
@@ -48,15 +58,6 @@ class Star {
   show() {
     strokeWeight(0);
     circle(this.x,this.y,this.size);
-  }
-}
-
-function draw() {
-  background(0);
-
-  for (let star of stars) {
-    star.move();
-    star.show();
   }
 }
     </script>
