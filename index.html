@@ -9,6 +9,7 @@
   <script type="text/javascript">
 let stars = [], numofstars = 500, varia;
 var song;
+let playingsong = false;
 
 function preload() {
   soundFormats('mp3');
@@ -32,6 +33,10 @@ function draw() {
   for (let star of stars) {
     star.move();
     star.show();
+  }
+  if (playingsong) {
+    var test = song.getAmp();
+    print(test);
   }
 }
 
@@ -67,8 +72,10 @@ class Star {
 }
 
 function mousePressed(){
+  playingsong = false;
   song.stop();
   song.play();
+  playingsong = true;
 }
     </script>
 </body>
