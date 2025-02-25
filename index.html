@@ -35,7 +35,7 @@ function draw() {
     star.show();
   }
   if (playingsong) {
-    var test = song.getAmp();
+    var test = song.getLevel();
     print(test);
   }
 }
@@ -72,10 +72,10 @@ class Star {
 }
 
 function mousePressed(){
-  playingsong = false;
-  song.stop();
-  song.play();
-  playingsong = true;
+  if (!playingsong) {
+    song.play();
+    playingsong = true;
+  }
 }
     </script>
 </body>
