@@ -36,7 +36,6 @@ function draw() {
     star.show();
   }
   if (playingsong) {
-    amplitude = new p5.Amplitude();
     text(amplitude,width/2,height/2);
   }
 }
@@ -76,6 +75,7 @@ function mousePressed(){
   if (!playingsong) {
     song.play();
     playingsong = true;
+    amplitude = new p5.Amplitude();
   }
 }
     </script>
