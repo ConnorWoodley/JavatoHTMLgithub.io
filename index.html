@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  //background(0);
+  background(255);
 
   for (let star of stars) {
     star.move();
@@ -75,7 +75,9 @@ function mousePressed(){
     playingsong = true;
   }
   var level = amplitude.getLevel();
-  text(level,width/2,height/2);
+  var size = map(level, 0, 1, 0, 200);
+  ellipse(width/2, height/2, size, size);
+  
 }
     </script>
 </body>
