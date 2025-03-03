@@ -29,7 +29,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  //background(0);
 
   for (let star of stars) {
     star.move();
@@ -37,7 +37,7 @@ function draw() {
   }
   if (playingsong) {
     amplitude = new p5.Amplitude();
-    print(amplitude);
+    text(amplitude,width/2,height/2);
   }
 }
 
