@@ -20,7 +20,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth-20,windowHeight-20);
   amplitude = new p5.Amplitude();
-  //background(0);
+  background(0);
 
   varia = sqrt(width*height)/2;
   for (let i = 0; i < numofstars; i += 1) {
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
 
   for (let star of stars) {
     star.move();
