@@ -36,6 +36,12 @@ function draw() {
     star.move();
     star.show();
   }
+
+  if (songplaying) {
+    var level = amplitude.getLevel();
+    var size = map(level, 0, 1, 0, 200);
+    text(size,width/2,height/2);
+  }
 }
 
 class Star {
@@ -74,10 +80,6 @@ function mousePressed(){
     song.play();
     playingsong = true;
   }
-  var level = amplitude.getLevel();
-  var size = map(level, 0, 1, 0, 200);
-  text(level,width/2,height/2)
-  
 }
     </script>
 </body>
