@@ -36,9 +36,6 @@ function draw() {
     star.move();
     star.show();
   }
-  if (playingsong) {
-    text(level,width/2,height/2);
-  }
 }
 
 class Star {
@@ -78,6 +75,7 @@ function mousePressed(){
     playingsong = true;
   }
   var level = amplitude.getLevel();
+  text(level,width/2,height/2);
 }
     </script>
 </body>
