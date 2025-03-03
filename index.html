@@ -9,7 +9,7 @@
   <script type="text/javascript">
 let stars = [], numofstars = 500, varia;
 var song;
-var test;
+var amplitude;
 let playingsong = false;
 
 function preload() {
@@ -36,8 +36,8 @@ function draw() {
     star.show();
   }
   if (playingsong) {
-    test = new Master();
-    print(test);
+    amplitude = new p5.Amplitude();
+    print(amplitude);
   }
 }
 
