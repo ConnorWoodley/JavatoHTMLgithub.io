@@ -9,6 +9,7 @@
   <script type="text/javascript">
 let stars = [], numofstars = 500, varia;
 var song;
+var test;
 let playingsong = false;
 
 function preload() {
@@ -35,7 +36,7 @@ function draw() {
     star.show();
   }
   if (playingsong) {
-    var test = song.Amplitude();
+    test = song.getMasterVolume();
     print(test);
   }
 }
