@@ -34,7 +34,6 @@ function draw() {
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
-    varia = 100/level;
     var size = map(level, 0, 1, 0, 100);
     text(size,width/2,height/2);
 

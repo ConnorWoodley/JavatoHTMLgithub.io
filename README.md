@@ -18,9 +18,7 @@ skipping songs, going back to songs, and having the user selected songs of their
 instead of having to deal with the pre-german-fantacizing-era of kanye songs I enjoy.
 
 / - Checklist - <br />
-|   [ ] Watching Amplitude *optional<br />
-|   -> [ ] Waveform Analyzer<br />
-|   -> [ ] Star Movement Amplitude<br />
+|   [ ] Waveform Analyzer<br />
 |   [ ] Half note Img<br />
 |   [ ] timer<br />
 |   -> [ ] Position in song total<br />
