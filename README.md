@@ -18,18 +18,18 @@ skipping songs, going back to songs, and having the user selected songs of their
 instead of having to deal with the pre-german-fantacizing-era of kanye songs I enjoy.
 
 / - Checklist - <br />
-|   [] Watching Amplitude *optional<br />
-|   -> [] Waveform Analyzer<br />
-|   -> [] Star Movement Amplitude<br />
-|   [] Half note Img<br />
-|   [] timer<br />
-|   -> [] Position in song total<br />
-|   -> [] Time length total<br />
-|   -> [] Time in song<br />
-|   [] Buttons<br />
-|   -> [] Back<br />
-|   -> [] Play<br />
-|   -> [] Pause<br />
-|   -> [] Fast-Forward<br />
-|   -> [] Skip<br />
+|   [ ] Watching Amplitude *optional<br />
+|   -> [ ] Waveform Analyzer<br />
+|   -> [ ] Star Movement Amplitude<br />
+|   [ ] Half note Img<br />
+|   [ ] timer<br />
+|   -> [ ] Position in song total<br />
+|   -> [ ] Time length total<br />
+|   -> [ ] Time in song<br />
+|   [ ] Buttons<br />
+|   -> [ ] Back<br />
+|   -> [ ] Play<br />
+|   -> [ ] Pause<br />
+|   -> [ ] Fast-Forward<br />
+|   -> [ ] Skip<br />
 \ - Checklist -<br />
