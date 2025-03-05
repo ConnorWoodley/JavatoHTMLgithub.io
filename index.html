@@ -9,12 +9,14 @@
   <script type="text/javascript">
 let stars = [], numofstars = 500, varia;
 var song;
+let img;
 var amplitude;
 let playingsong = false;
 
 function preload() {
   soundFormats('mp3');
   song = loadSound('Music/SynthwaveFun.mp3');
+  img = loadImage('Images/OneEighthNote.png');
 }
 
 function setup() {
@@ -41,6 +43,10 @@ function draw() {
       star.move();
       star.show();
     }
+    translate(width/2-width/10,height/2-height/10);
+    push();
+    image(img,width/10,height/10);
+    pop();
   }
 }
 
@@ -85,9 +91,4 @@ function mousePressed(){
 }
     </script>
 </body>
-
-<head>
-  <img src="https://images.vexels.com/media/users/3/143528/isolated/lists/cc4fe6d36794d677dbd7090cb2c9a9b2-eighth-note-music.png" alt='Images/OneEighthNote.png' title="WOW! Mr. Mercer" style="max-width:25%;height:auto;">
-</head>
-
 </html>
