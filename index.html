@@ -31,16 +31,16 @@ function setup() {
 
 function draw() {
   background(0);
-  for (let star of stars) {
-    star.move();
-    star.show();
-  }
-
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
-    var size = map(level, 0, 1, 0, 200);
+    var size = map(level, 0, 1, 0, 100);
     text(size,width/2,height/2);
+
+    for (let star of stars) {
+      star.move();
+      star.show();
+    }
   }
 }
 
