@@ -17,7 +17,7 @@ into an array where the songs can be displayed or selected. This should allow au
 skipping songs, going back to songs, and having the user selected songs of their choosing
 instead of having to deal with the pre-german-fantacizing-era of kanye songs I enjoy.
 
-/- Checklist - <br />
+/ - Checklist - <br />
 |   [] Watching Amplitude *optional<br />
 |   -> [] Waveform Analyzer<br />
 |   -> [] Star Movement Amplitude<br />
@@ -32,4 +32,4 @@ instead of having to deal with the pre-german-fantacizing-era of kanye songs I e
 |   -> [] Pause<br />
 |   -> [] Fast-Forward<br />
 |   -> [] Skip<br />
-\- Checklist -<br />
+\ - Checklist -<br />
