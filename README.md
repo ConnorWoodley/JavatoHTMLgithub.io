@@ -7,9 +7,9 @@ https://www.youtube.com/watch?v=ftjZI4mLCoI
 
 Now currently looking at a way to drag/drop music into the program (this idea might change)
 https://editor.p5js.org/Sophi333/sketches/2sTRc_moH
-only issue is that it uses an external API. Which I do not prefer
-<br />
-** ** Progress Update ** **
+only issue is that it uses an external API. Which I do not prefer<br />
+
+** ** Progress Update ** **<br />
 finally solved the amplitude issue, so now the waveform visualizer can be implimented.
 Some new ideas is to possibly make the song selection a sort of "drop file" type player,
 where the user can use a computer to drop a file into the canvas which will then be saved
