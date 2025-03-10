@@ -37,6 +37,7 @@ function setup() {
   imgposX = width*0.5 - imgsizeX/2;
   imgposY = height*0.5 - imgsizeY/2;
   img.resize(imgsizeX,imgsizeY);
+  img.filter(INVERT);
 }
 
 function draw() {
@@ -53,7 +54,6 @@ function draw() {
     }
 
     push();
-    img.filter(INVERT);
     image(img,imgposX,imgposY);
     pop();
   }
