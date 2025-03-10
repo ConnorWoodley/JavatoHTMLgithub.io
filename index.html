@@ -42,6 +42,7 @@ function setup() {
 
   lineposx = width*0.5;
   lineposy = height*0.4;
+  Waveformlines = 30;
 }
 
 function draw() {
@@ -64,10 +65,10 @@ function draw() {
     push();
     stroke(255);
     strokeWeight(3);
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < Waveformlines; i++) {
       if (i != 0)  {
-      linesize = (1/sq(i-10)) * size;
-      line(lineposx + (i-10)*5, lineposy - linesize/2, lineposx + (i-10)*2, lineposy + linesize/2);
+      linesize = (3/sq(i-(Waveformlines/2))) * size;
+      line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
       }
     }
     pop();
