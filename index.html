@@ -36,9 +36,6 @@ function setup() {
   imgsizeY = width*0.2;
   imgposX = width*0.5 - imgsizeX/2;
   imgposY = height*0.5 - imgsizeY/2;
-
-  img.resize(imgsizeX,imgsizeY);
-  img.filter(INVERT);
 }
 
 function draw() {
@@ -56,6 +53,8 @@ function draw() {
 
 
     image(img,imgposX,imgposY);
+    img.resize(imgsizeX,imgsizeY);
+    img.filter(INVERT);
   }
 }
 
