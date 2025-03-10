@@ -66,10 +66,9 @@ function draw() {
     stroke(255);
     strokeWeight(3);
     for (let i = 0; i < Waveformlines; i++) {
-      if (i != 0)  {
-      linesize = (3/sq(i-(Waveformlines/2))) * size;
+      linesize = (4/sq(i-(Waveformlines/2))) * size;
+      if (i = 0)  {linesize = (4/sq(1)) * size;}
       line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
-      }
     }
     pop();
   }
