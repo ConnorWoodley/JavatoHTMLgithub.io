@@ -41,7 +41,7 @@ function setup() {
   img.filter(INVERT);
 
   lineposx = width*0.5;
-  lineposy = height*0.2;
+  lineposy = height*0.4;
 }
 
 function draw() {
@@ -64,9 +64,11 @@ function draw() {
     push();
     stroke(255);
     strokeWeight(3);
-    for (let i = 0; i < 20; i+=1.01) {
+    for (let i = 0; i < 20; i++) {
+      if (i != 0)  {
       linesize = (1/sq(i-10)) * size;
-      line(lineposx + (i-10)*2, lineposy - linesize/2, lineposx + (i-10)*2, lineposy + linesize/2);
+      line(lineposx + (i-10)*5, lineposy - linesize/2, lineposx + (i-10)*2, lineposy + linesize/2);
+      }
     }
     pop();
   }
