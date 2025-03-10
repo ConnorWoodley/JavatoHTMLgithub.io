@@ -19,7 +19,7 @@ instead of having to deal with the pre-german-fantacizing-era of kanye songs I e
 
 / - Checklist - <br />
 |   [ ] Waveform Analyzer<br />
-|   [ ] Half note Img<br />
+|   [X] Half note Img<br />
 |   [ ] timer<br />
 |   -> [ ] Position in song total<br />
 |   -> [ ] Time length total<br />
