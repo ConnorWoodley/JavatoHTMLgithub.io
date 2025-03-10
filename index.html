@@ -14,6 +14,7 @@ var amplitude;
 let playingsong = false;
 
 let imgposX, imgposY, imgsizeX, imgsizeY;
+let Waveformlines, linesize;
 
 function preload() {
   soundFormats('mp3');
@@ -32,12 +33,15 @@ function setup() {
     stars.push(star);
   }
 
-  imgsizeX = width*0.2;
-  imgsizeY = width*0.2;
+  imgsizeX = width*0.1;
+  imgsizeY = width*0.1;
   imgposX = width*0.5 - imgsizeX/2;
-  imgposY = height*0.5 - imgsizeY/2;
+  imgposY = height*0.2 - imgsizeY/2;
   img.resize(imgsizeX,imgsizeY);
   img.filter(INVERT);
+
+  lineposx = width*0.5;
+  lineposy = height*0.2;
 }
 
 function draw() {
@@ -55,6 +59,15 @@ function draw() {
 
     push();
     image(img,imgposX,imgposY);
+    pop();
+
+    push();
+    stroke(255);
+    strokeWeight(3);
+    for (let i = 0; i < 20; i+=1.01) {
+      linesize = (1/sq(i-10)) * size;
+      line(lineposx + (i-10)*2, lineposy - linesize/2, lineposx + (i-10)*2, lineposy + linesize/2);
+    }
     pop();
   }
 }
