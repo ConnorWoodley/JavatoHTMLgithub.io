@@ -67,7 +67,7 @@ function draw() {
     strokeWeight(3);
     for (let i = 0; i < Waveformlines; i++) {
       var amplitudelvl = (20/sq(i-(Waveformlines/2))) * size
-      linesize = map(amplitudelvl, 0,1, 0,1/2)
+      linesize = map(amplitudelvl, 0,100, 0,50)
       line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
     }
     pop();
