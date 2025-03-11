@@ -66,7 +66,7 @@ function draw() {
     strokeWeight(3);
     for (let i = 0; i < Waveformlines; i++) {
       let amplitudelvl = (10000/sq(i-(Waveformlines/2))) * level
-      linesize = constrain(map(amplitudelvl, 0,100, 0,20), 1, 40);
+      linesize = constrain(map(amplitudelvl, 0,100, 0,10), 1, 80);
       line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
     }
     pop();
