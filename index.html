@@ -50,7 +50,6 @@ function draw() {
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
-    var size = map(level, 0, 1, 0, 10);
     text(linesize,width/2,height/2);
 
     for (let star of stars) {
@@ -66,7 +65,7 @@ function draw() {
     stroke(255);
     strokeWeight(3);
     for (let i = 0; i < Waveformlines; i++) {
-      var amplitudelvl = (20/sq(i-(Waveformlines/2))) * size
+      var amplitudelvl = (20/sq(i-(Waveformlines/4))) * size
       linesize = map(amplitudelvl, 0,100, 3,50)
       line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
     }
