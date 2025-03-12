@@ -33,16 +33,16 @@ function setup() {
     stars.push(star);
   }
 
-  imgsizeX = width*0.1;
-  imgsizeY = width*0.1;
+  imgsizeX = width*0.2;
+  imgsizeY = width*0.2;
   imgposX = width*0.5 - imgsizeX/2;
   imgposY = height*0.2 - imgsizeY/2;
   img.resize(imgsizeX,imgsizeY);
   img.filter(INVERT);
 
   lineposx = width*0.5;
-  lineposy = height*0.4;
-  Waveformlines = 30;
+  lineposy = height*0.5;
+  Waveformlines = 50;
 }
 
 function draw() {
@@ -50,7 +50,6 @@ function draw() {
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
-    text(linesize,width/2,height/2);
 
     for (let star of stars) {
       star.move();
