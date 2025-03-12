@@ -36,7 +36,7 @@ function setup() {
   imgsizeX = width*0.15;
   imgsizeY = width*0.15;
   imgposX = width*0.5 - imgsizeX/2;
-  imgposY = height*0.2 - imgsizeY/2;
+  imgposY = height*0.22 - imgsizeY/2;
   img.resize(imgsizeX,imgsizeY);
   img.filter(INVERT);
 
@@ -69,6 +69,7 @@ function draw() {
         line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
         line(lineposx, lineposy - 1, lineposx, lineposy + 1);
     }
+    line();
     pop();
   }
 }
