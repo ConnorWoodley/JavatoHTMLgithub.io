@@ -59,7 +59,7 @@ function setup() {
 
 function draw() {
   background(0);
-  console(buttonimages.length());
+  console(buttonimages.length);
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
@@ -87,7 +87,7 @@ function draw() {
 
     push();
     translate(buttonimgposX-(buttonimgsizeX*(buttonimages.length/2)),0);
-    for (let i = 0; i<buttonimages.length(); i++) {
+    for (let i = 0; i<buttonimages.length; i++) {
       image(buttonimages[i], buttonimgposX*(i), buttonimgposY);
     }
     pop();
