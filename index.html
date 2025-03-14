@@ -86,6 +86,7 @@ function draw() {
     pop();
 
     push();
+    img.filter(INVERT);
     img.resize(buttonimgsizeX,buttonimgsizeY);
     translate(buttonimgposX-(buttonimgsizeX*(buttonimages.length/2)),0);
     for (let i = 0; i<buttonimages.length; i++) {
