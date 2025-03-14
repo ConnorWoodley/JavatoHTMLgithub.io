@@ -16,10 +16,17 @@ let playingsong = false;
 let imgposX, imgposY, imgsizeX, imgsizeY;
 let Waveformlines, linesize = 0;
 
+let buttonimages = [];
+
 function preload() {
   soundFormats('mp3');
   song = loadSound('Music/SynthwaveFun.mp3');
   img = loadImage('Images/OneEighthNote.png');
+  buttonimages[0] = loadImage('Images/backbutton.png');
+  buttonimages[1] = loadImage('Images/pausebutton.png');
+  buttonimages[2] = loadImage('Images/playbutton.png');
+  buttonimages[3] = loadImage('Images/fastforwardbutton.png');
+  buttonimages[4] = loadImage('Images/skipkbutton.png');
 }
 
 function setup() {
@@ -43,10 +50,16 @@ function setup() {
   lineposx = width*0.5;
   lineposy = height*0.5;
   Waveformlines = 50;
+  
+  buttonimgsizeX = width*0.1;
+  buttonimgsizeY = width*0.1;
+  buttonimgposX = width*0.5 - buttonimgsizeX/2;
+  buttonimgposY = height*0.7 - buttonimgsizeY/2;
 }
 
 function draw() {
   background(0);
+  console(len(buttonimages));
   if (playingsong) {
     fill(255,255,0);
     var level = amplitude.getLevel();
@@ -64,12 +77,19 @@ function draw() {
     stroke(255);
     strokeWeight(3);
     for (let i = 0; i <= Waveformlines; i++) {
-        let amplitudelvl = sq(i-(Waveformlines/2))/100 * level
-        linesize = constrain(map(amplitudelvl, 0,1, 1,20), 1, 60);
-        line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
-        line(lineposx, lineposy - 1, lineposx, lineposy + 1);
+      let amplitudelvl = sq(i-(Waveformlines/2))/100 * level
+      linesize = constrain(map(amplitudelvl, 0,1, 1,20), 1, 60);
+      line(lineposx + (i-(Waveformlines/2))*5, lineposy - linesize/2, lineposx + (i-(Waveformlines/2))*5, lineposy + linesize/2);
+      line(lineposx, lineposy - 1, lineposx, lineposy + 1);
     }
     line();
+    pop();
+
+    push();
+    translate(buttonimgposX-(buttonimgsizeX*-2.5),0);
+    for (let i = 0; i<5; i++) {
+      image(buttonimages[i], buttonimgposX*(i), buttonimgposY);
+    }
     pop();
   }
 }
