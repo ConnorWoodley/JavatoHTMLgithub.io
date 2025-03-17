@@ -55,7 +55,7 @@ function setup() {
   buttonimgsizeY = width*0.05;
   buttonimgposX = width*0.5 - buttonimgsizeX/2;
   buttonimgposY = height*0.7 - buttonimgsizeY/2;
-  for (let i = 0; i<buttonimages.length; i++) {
+  for (let i = 0; i<=buttonimages.length; i++) {
     buttonimages[i].filter(INVERT);
   }
 }
@@ -91,9 +91,9 @@ function draw() {
 
     push();
     translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
-    for (let i = 0; i<buttonimages.length; i++) {
+    for (let i = 0; i<=buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
-      if (i < 3) {scale(-1, 1);}
+      if (i < 2) {scale(-1, 1);}
       image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
     }
     pop();
