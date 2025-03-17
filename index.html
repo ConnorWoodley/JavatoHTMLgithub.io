@@ -22,11 +22,12 @@ function preload() {
   soundFormats('mp3');
   song = loadSound('Music/SynthwaveFun.mp3');
   img = loadImage('Images/OneEighthNote.png');
-  buttonimages[0] = loadImage('Images/backbutton.png');
-  buttonimages[1] = loadImage('Images/pausebutton.png');
-  buttonimages[2] = loadImage('Images/playbutton.png');
-  buttonimages[3] = loadImage('Images/fastforwardbutton.png');
-  buttonimages[4] = loadImage('Images/skipbutton.png');
+  buttonimages[0] = loadImage('Images/skipbutton.png');
+  buttonimages[1] = loadImage('Images/fastforwardbutton.png');
+  buttonimages[2] = loadImage('Images/pausebutton.png');
+  buttonimages[3] = loadImage('Images/playbutton.png');
+  buttonimages[4] = loadImage('Images/fastforwardbutton.png');
+  buttonimages[5] = loadImage('Images/skipbutton.png');
 }
 
 function setup() {
@@ -92,6 +93,7 @@ function draw() {
     translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
     for (let i = 0; i<buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
+      if (i < 3) {scale(-1, 1);}
       image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
     }
     pop();
