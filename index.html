@@ -42,7 +42,7 @@ function setup() {
 
   imgsizeX = width*0.15;
   imgsizeY = width*0.15;
-  imgposX = width*0.5 - imgsizeX/2;
+  imgposX = width*0.5 - imgsizeX/2 - 10;
   imgposY = height*0.22 - imgsizeY/2;
   img.filter(INVERT);
 
@@ -89,7 +89,7 @@ function draw() {
     pop();
 
     push();
-    translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/3,0);
+    translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
     for (let i = 0; i<buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
       image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
