@@ -44,7 +44,7 @@ function setup() {
   imgsizeY = width*0.15;
   imgposX = width*0.5 - imgsizeX/2;
   imgposY = height*0.22 - imgsizeY/2;
-  //img.filter(INVERT);
+  img.filter(INVERT);
 
   lineposx = width*0.5;
   lineposy = height*0.5;
@@ -54,6 +54,9 @@ function setup() {
   buttonimgsizeY = width*0.05;
   buttonimgposX = width*0.5 - buttonimgsizeX/2;
   buttonimgposY = height*0.7 - buttonimgsizeY/2;
+  for (let i = 0; i<5; i++) {
+    buttonimages[i].filter(INVERT);
+  }
 }
 
 function draw() {
