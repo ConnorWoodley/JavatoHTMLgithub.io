@@ -60,7 +60,7 @@ function setup() {
 }
 
 function draw() {
-  background(130);
+  background(0);
   console.log(buttonimages.length);
   if (playingsong) {
     fill(255,255,0);
@@ -89,10 +89,10 @@ function draw() {
     pop();
 
     push();
-    translate(buttonimgposX-(buttonimgsizeX*(buttonimages.length/2)),0);
+    translate(buttonimgposX,0);
     for (let i = 0; i<buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
-      image(buttonimages[i], buttonimgposX*(i), buttonimgposY);
+      image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
     }
     pop();
   }
