@@ -50,8 +50,8 @@ function setup() {
   lineposy = height*0.5;
   Waveformlines = 50;
   
-  buttonimgsizeX = imgsizeX/100;
-  buttonimgsizeY = imgsizeX/100;
+  buttonimgsizeX = width*0.05;
+  buttonimgsizeY = width*0.05;
   buttonimgposX = width*0.5 - buttonimgsizeX/2;
   buttonimgposY = height*0.7 - buttonimgsizeY/2;
   for (let i = 0; i<5; i++) {
@@ -89,9 +89,9 @@ function draw() {
     pop();
 
     push();
-    img.resize(buttonimgsizeX,buttonimgsizeY);
     translate(buttonimgposX-(buttonimgsizeX*(buttonimages.length/2)),0);
     for (let i = 0; i<buttonimages.length; i++) {
+      buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
       image(buttonimages[i], buttonimgposX*(i), buttonimgposY);
     }
     pop();
