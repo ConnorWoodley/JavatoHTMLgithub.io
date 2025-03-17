@@ -54,13 +54,13 @@ function setup() {
   buttonimgsizeY = width*0.05;
   buttonimgposX = width*0.5 - buttonimgsizeX/2;
   buttonimgposY = height*0.7 - buttonimgsizeY/2;
-  for (let i = 0; i<5; i++) {
+  for (let i = 0; i<buttonimages.length; i++) {
     buttonimages[i].filter(INVERT);
   }
 }
 
 function draw() {
-  background(0);
+  background(130);
   console.log(buttonimages.length);
   if (playingsong) {
     fill(255,255,0);
