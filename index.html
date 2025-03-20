@@ -88,6 +88,8 @@ function draw() {
     }
     line();
     pop();
+    
+    push();
     translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
     scale(-1,1);
     image(buttonimages[0], 0, buttonimgposY);
