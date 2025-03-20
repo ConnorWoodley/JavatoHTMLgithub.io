@@ -90,13 +90,15 @@ function draw() {
     pop();
     
     push();
-    img.resize(buttonimgsizeX,buttonimgsizeY);
     translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
+    buttonimages[0].resize(buttonimgsizeX,buttonimgsizeY);
+    buttonimages[1].resize(buttonimgsizeX,buttonimgsizeY);
     scale(-1,1)
     image(buttonimages[0], 0, buttonimgposY);
     image(buttonimages[1], -buttonimgsizeX, buttonimgposY);
     scale(-1,1)
     for (let i = 2; i<buttonimages.length; i++) {
+      buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
       image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
     }
     pop();
