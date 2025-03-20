@@ -88,16 +88,13 @@ function draw() {
     }
     line();
     pop();
-
-    push();
     translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
-    for (let i = 0; i<buttonimages.length; i++) {
-      buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
-      if (i == 0) {
-        scale(-1,1); 
-        image(buttonimages[i], -buttonimgsizeX*(i), buttonimgposY); 
-      }
-      else {image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);}
+    scale(-1,1);
+    image(buttonimages[0], 0, buttonimgposY);
+    image(buttonimages[1], buttonimgsizeX, buttonimgposY);
+    scale(1,1);
+    for (let i = 2; i<buttonimages.length; i++) {
+      image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
     }
     pop();
   }
