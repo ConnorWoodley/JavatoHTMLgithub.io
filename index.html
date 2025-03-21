@@ -95,8 +95,7 @@ function draw() {
     buttonimages[1].resize(buttonimgsizeX,buttonimgsizeY);
     scale(-1,1)
     image(buttonimages[0], 0, buttonimgposY);
-    translate(buttonimgsizeX*3);
-    image(buttonimages[1], 0, buttonimgposY);
+    image(buttonimages[1], buttonimgsizeX, buttonimgposY);
     scale(-1,1)
     for (let i = 2; i<buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
