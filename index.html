@@ -102,8 +102,11 @@ function draw() {
     image(buttonimages[1], -buttonimgsizeX*2, 0);
     scale(-1,1)
     for (let i = 2; i<buttonimages.length; i++) {
-      buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
-      image(buttonimages[i], buttonimgsizeX*(i), 0);
+      //square(buttonimgsize*i, 0, );
+      if (i > 1) {
+        buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
+        image(buttonimages[i], buttonimgsizeX*(i), 0);
+      }
     }
     pop();
   }
