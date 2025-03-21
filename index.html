@@ -90,20 +90,20 @@ function draw() {
     pop();
     
     push();
-    translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,0);
     noFill();
     stroke(255);
     strokeWeight(2);
-    rect(0,0,buttonimages.length*buttonimgsizeX,buttonimgsizeY);
+    translate(buttonimgposX - (buttonimgsizeX*buttonimages.length)/2.5,buttonimgposY);
+    rect(buttonimgposX,buttonimgposY,buttonimages.length*buttonimgsizeX,buttonimgsizeY);
     buttonimages[0].resize(buttonimgsizeX,buttonimgsizeY);
     buttonimages[1].resize(buttonimgsizeX,buttonimgsizeY);
     scale(-1,1)
-    image(buttonimages[0], -buttonimgsizeX, buttonimgposY);
-    image(buttonimages[1], -buttonimgsizeX*2, buttonimgposY);
+    image(buttonimages[0], -buttonimgsizeX, 0);
+    image(buttonimages[1], -buttonimgsizeX*2, 0);
     scale(-1,1)
     for (let i = 2; i<buttonimages.length; i++) {
       buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
-      image(buttonimages[i], buttonimgsizeX*(i), buttonimgposY);
+      image(buttonimages[i], buttonimgsizeX*(i), 0);
     }
     pop();
   }
