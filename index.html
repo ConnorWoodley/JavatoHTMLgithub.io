@@ -104,7 +104,7 @@ function draw() {
     for (let i = 0; i<buttonimages.length; i++) {
       stroke(2);
       strokeWeight(255);
-      rect(buttonimgsizeX*i, 0, buttonimgsizeX,buttonimgsizeY);
+      rect(buttonimgsizeX*i, 0, 10,10);
       if (i > 1) {
         buttonimages[i].resize(buttonimgsizeX,buttonimgsizeY);
         image(buttonimages[i], buttonimgsizeX*(i), 0);
